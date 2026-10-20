@@ -1,0 +1,124 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praktikum JavaScript</title>
+</head>
+<body>
+<h1>Pengenalan JavaScript</h1>
+<p id="pesan">Konten awal.</p>
+
+<label for="bilangan">Masukkan bilangan bulat:</label>
+<input type="number" id="bilangan" step="1">
+<button type="button" onclick="cekBilangan()">Periksa</button>
+<p id="hasilBilangan"></p>
+
+<button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
+<button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
+<button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
+
+<h3>Daftar Menu Makanan</h3>
+<label><input type="checkbox" class="menu" value="5000"> Ayam Goreng – Rp5.000</label><br>
+<label><input type="checkbox" class="menu" value="500"> Tempe – Rp500</label><br>
+<label><input type="checkbox" class="menu" value="2500"> Telur Dadar – Rp2.500</label><br>
+<!-- Penambahan minimal dua pilihan menu baru -->
+<label><input type="checkbox" class="menu" value="3000"> Es Teh – Rp3.000</label><br>
+<label><input type="checkbox" class="menu" value="6000"> Mie Goreng – Rp6.000</label><br>
+
+<p>Total: Rp<span id="total">0</span></p>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #245b91;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #245b91;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #17416b;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eaf4ff;
+            border-radius: 5px;
+            display: none;
+            line-height: 1.8;
+        }
+
+        .error {
+            color: red;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Kalkulator Nilai Mahasiswa</h2>
+
+    <form id="formNilai">
+        <label for="tugas">Nilai Tugas (0–100)</label>
+        <input type="number" id="tugas" min="0" max="100"
+               step="any" required>
+
+        <label for="uts">Nilai UTS (0–100)</label>
+        <input type="number" id="uts" min="0" max="100"
+               step="any" required>
+
+        <label for="uas">Nilai UAS (0–100)</label>
+        <input type="number" id="uas" min="0" max="100"
+               step="any" required>
+
+        <button type="submit">Hitung Nilai</button>
+    </form>
+
+    <div id="error" class="error"></div>
+    <div id="hasil"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
